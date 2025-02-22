@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aula 02 - ILP502</title>
-    <!--<link href="css/style.css" rel="stylesheet" />-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <header id="home">
-      <h1>Pot at O's</h1>
-      <nav>
-        <ul>
+    <header id="home" class="grid-container">
+      <h1 class="cell">Pot at O's</h1>
+      <nav class="grid-x grid-padding-x">
+        <ul class="menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#history">Our History</a></li>
           <li><a href="#product">Our Products</a></li>
@@ -19,14 +23,14 @@
       </nav>
     </header>
 
-    <main>
-      <div id="history">
-        <article>
+    <main class="grid-container">
+      <div id="history" class="grid-x grid-padding-x">
+        <article class="cell">
           <h2>
             Potatoes in a Pot
             <sub style="font-size: 8px">by Oliver O'Conner</sub>
           </h2>
-          <section>
+          <section class="medium-3 cell">
             <p>
               In the bustling town of Greenwick, where farmers' markets and
               artisanal goods thrived, a quirky entrepreneur named Oliver
@@ -65,12 +69,20 @@
         </article>
       </div>
 
-      <div>
-        <article id="product">
-          <h2>Our Products</h2>
-          <section>
+      <div class="grid-container">
+        <article id="product" class="grid-x grid-padding-x">
+          <h2 class="cell">Our Products</h2>
+          <section class="small-12 medium-6 large-4 cell">
             <h3>The Classic Spud Starter</h3>
             <p><em>$9.99</em></p>
+            <div class="media-object">
+              <img
+                class="thumbnail cell"
+                src="images/img1.webp"
+                alt="Speedy Spud Kit image"
+              />
+            </div>
+
             <p>
               A perfect entry-level product for potato lovers! This
               biodegradable pot comes pre-planted with an easy-to-grow
@@ -79,9 +91,17 @@
               delicious homegrown potatoes in a few weeks—no backyard required!
             </p>
           </section>
-          <section>
+          <section class="small-12 medium-6 large-4 cell">
             <h3>The Gourmet Trio Pack</h3>
             <p><em>$19.99</em></p>
+            <div class="media-object">
+              <img
+                class="thumbnail cell"
+                src="images/img2.webp"
+                alt="Speedy Spud Kit image"
+              />
+            </div>
+
             <p>
               For foodies who love variety, this set includes
               <strong>three mini pots</strong>, each growing a unique gourmet
@@ -92,9 +112,16 @@
               culinary creations!
             </p>
           </section>
-          <section>
+          <section class="small-12 medium-6 large-4 cell">
             <h3>The Speedy Spud Kit</h3>
             <p><em>$14.99</em></p>
+            <div class="media-object">
+              <img
+                class="thumbnail cell"
+                src="images/img3.webp"
+                alt="Speedy Spud Kit image"
+              />
+            </div>
             <p>
               For those who don’t like waiting, this kit features
               <strong>fast-sprouting baby potatoes</strong> in a self-watering
@@ -111,40 +138,59 @@
           </section>
         </article>
       </div>
-      <div id="contact">
-        <h2>Contact Us</h2>
+      <div id="contact" class="grid-container">
+        <h2 class="cell">Contact Us</h2>
         <form action="/send" method="post">
           <fieldset>
-            <legend>Send us an email</legend>
-            <label for="name">Name: </label>
-            <br />
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value=""
-              placeholder="Full name"
-            /><br />
-            <label for="email">Email: </label>
-            <br />
-            <input type="email" id="email" name="email" value="" />
-            <br />
-            <label for="message">Message: </label>
-            <br />
-            <textarea id="message" name="message" rows="6" cols="50"></textarea>
-            <br />
-            <button type="submit">Send</button>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label for="name">Name: </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value=""
+                    placeholder="Full name"
+                  />
+                </div>
+                <div class="medium-6 cell">
+                  <label for="email">Email: </label>
+                  <input type="email" id="email" name="email" value="" />
+                </div>
+                <div class="medium-12 cell">
+                  <label for="message">Message: </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    cols="50"
+                  ></textarea>
+                </div>
+                <div class="medium-12 cell">
+                  <button type="submit" class="submit success button expanded">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
           </fieldset>
         </form>
       </div>
     </main>
 
-    <footer>
-      <address>
-        <p>See our factory at</p>
-        <p>Kartoffën Avenue, 8080 - Olive Garden Park</p>
-      </address>
-      <p>Made with love and Taters</p>
+    <footer class="callout large secondary">
+      <div class="grid-container">
+        <address>
+          <p>See our factory at</p>
+          <p>Kartoffën Avenue, 8080 - Olive Garden Park</p>
+        </address>
+        <p>Made with love and Taters</p>
+      </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/js/foundation.min.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
